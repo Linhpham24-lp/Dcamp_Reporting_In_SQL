@@ -1,23 +1,4 @@
-## Chapter 4: Complex Calculations
-### Exercise 8: Report 4: Tallest athletes and % GDP by region
-The final report on the dashboard is Report 4: Avg Tallest Athlete and % of world GDP by Region.
 
-Report Details:
-
-- Column 1 should be region found in the countries table.
-- Column 2 should be avg_tallest, which averages the tallest athlete from each country within the region.
-- Column 3 should be perc_world_gdp, which represents what % of the world's GDP is attributed to the region.
-- GDP should only be counted from years 2005 and on.
-- Only winter_games should be included (no summer events).
-
-### Instructions for the exercises: 
-- **Query 1**:
-    - Pull country_id and height for winter athletes, group by these two fields, and order by country_id and height in descending order.
-    - Use ROW_NUMBER() to create row_num, which numbers rows within a country by height where 1 is the tallest.
-- **Query 2**:
-    - Alias your query as subquery then use this subquery to join the countries table to pull in the region and average_tallest field, the last of which averages the tallest height of each country.
-- **Query 3**:
-    - Join to the country_stats table to create the perc_world_gdp field that calculates [region's GDP] / [world's GDP].
 --Month-over-month comparison
 SELECT
 	-- Pull month and country_id
